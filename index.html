@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm số lần bấm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .counter {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 250px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        button {
+            padding: 8px 15px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .main-buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Đếm số lần bấm</h2>
+    <div class="container">
+        <div class="counter">
+            <label>HCM:</label>
+            <span id="count-hcm">0</span>
+            <button onclick="increaseCount('hcm')">Bấm</button>
+        </div>
+        <div class="counter">
+            <label>Đồng Nai:</label>
+            <span id="count-dongnai">0</span>
+            <button onclick="increaseCount('dongnai')">Bấm</button>
+        </div>
+        <div class="counter">
+            <label>Tây Ninh:</label>
+            <span id="count-tayninh">0</span>
+            <button onclick="increaseCount('tayninh')">Bấm</button>
+        </div>
+        <div class="counter">
+            <label>Bình Phước:</label>
+            <span id="count-binhphuoc">0</span>
+            <button onclick="increaseCount('binhphuoc')">Bấm</button>
+        </div>
+        <div class="counter">
+            <label>Bình Dương:</label>
+            <span id="count-binhduong">0</span>
+            <button onclick="increaseCount('binhduong')">Bấm</button>
+        </div>
+        <div class="counter">
+            <label>Vũng Tàu:</label>
+            <span id="count-vungtau">0</span>
+            <button onclick="increaseCount('vungtau')">Bấm</button>
+        </div>
+    </div>
+
+    <div class="main-buttons">
+        <!-- <button onclick="alert('Chức năng 1')">Nút 1</button>
+        <button onclick="alert('Chức năng 2')">Nút 2</button>
+        <button onclick="alert('Chức năng 3')">Nút 3</button>
+        <button onclick="alert('Chức năng 4')">Nút 4</button> -->
+    </div>
+
+    <script>
+        function increaseCount(id) {
+            let countElement = document.getElementById("count-" + id);
+            let count = parseInt(countElement.innerText);
+            countElement.innerText = count + 1;
+        }
+    </script>
+
+</body>
+</html>
